@@ -28,7 +28,7 @@ export default function Login(){
                     <div>
                         {
                             isSigningUp ? (
-                                <button 
+                                <button className="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                                     type="submit" 
                                     formAction={signup}
                                     onClick={() => setClickSignUp(true)}
@@ -48,15 +48,16 @@ export default function Login(){
                     {
                         !isSigningUp ? (
                             <p className="items-center justify-center text-sm font-light text-gray-500 dark:text-gray-400"> Don't have an account? {' '}
-                                <button className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                <button className="font-medium text-blue-600 hover:underline dark:text-primary-500"
                                     onClick={() => setIsSigningUp(true)}
                                 >
                                     Sign up
                                 </button>
                             </p>
                         ) : (
-                            <p> Already have an account? {' '}
-                                <button type="submit" formAction={login}>
+                            <p  className="items-center justify-center text-sm font-light text-gray-500 dark:text-gray-400"> Already have an account? {' '}
+                                <button className="font-medium text-blue-600 hover:underline dark:text-primary-500"
+                                type="submit" formAction={login}>
                                     Login
                                 </button>
                             </p>
