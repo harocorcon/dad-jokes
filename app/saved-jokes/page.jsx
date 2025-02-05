@@ -1,3 +1,4 @@
+import DeleteJoke from "../components/DeleteJoke";
 import { createClient } from "../utils/supabase/server"
 
 
@@ -25,7 +26,7 @@ export default async function SavedJokes() {
                 { jokes.map((joke) => (
                     <div key={joke.id} className="flex items-center justify-center space-x-2">
                         <li className="list-none">{joke.joke_text}</li>
-                        {/* delete button */}
+                        <DeleteJoke jokeId={joke.id} />
                     </div>
                 ))}
             </ul>
