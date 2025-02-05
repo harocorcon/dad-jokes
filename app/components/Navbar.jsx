@@ -15,7 +15,7 @@ export default function NavBar(){
                     </li>
                 </ul>
                 <div>
-                    {/* <LoginOut /> */}
+                    <LoginOut />
                 </div>
             </div>
         </nav>
