@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function JokeFecther() {
+export default function JokeFetcher() {
     const [joke, setJoke] = useState('')
 
     const fetchJoke = async () => {
