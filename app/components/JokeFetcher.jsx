@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
+import { saveJoke } from "../data/jokes/actions";
 
 export default function JokeFetcher({user}) {
     const [joke, setJoke] = useState('')
@@ -36,6 +37,7 @@ export default function JokeFetcher({user}) {
                 disabled={!user}
                     onClick={async() => {
                         if(!user) return;
+                        await saveJoke(joke);
                         alert('joke saved')
                     }}>{saveJokeText}
                 </button>
