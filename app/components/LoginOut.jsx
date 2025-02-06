@@ -5,7 +5,6 @@ import LogoutButton from "./LogoutButton";
 export default async function LoginOut() {
     const supabase = createClient();
     const { data } = await (await supabase).auth.getUser()
-    console.log(data)
 
     if(data.user) {
         return ( 

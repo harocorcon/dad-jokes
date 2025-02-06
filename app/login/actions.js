@@ -12,7 +12,7 @@ export async function login(formData){
         password: formData.get('password')
     }
 
-    const {error} = (await supabase).auth.signInWithPassword(data);
+    const {error} = await (await supabase).auth.signInWithPassword(data);
 
     if(error){
         console.error(error)
